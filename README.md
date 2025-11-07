@@ -25,6 +25,7 @@ You will:
 - `deployment/`: Deployment configuration files and scripts
 - `.env.example`: Example environment variable templates
 - `monitoring/`: Monitoring configuration examples
+ - `assignment-solution/`: Templates and CI/CD examples to help complete the assignment
 
 ## Requirements
 
@@ -75,3 +76,26 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [Railway Documentation](https://docs.railway.app/)
 - [Vercel Documentation](https://vercel.com/docs)
 - [Netlify Documentation](https://docs.netlify.com/) 
+
+## Quick support (templates)
+
+I added an `assignment-solution/` folder containing ready-to-adapt templates:
+
+- `assignment-solution/.env.example` — environment variable names
+- `assignment-solution/backend/Dockerfile` — production Dockerfile for Express
+- `assignment-solution/backend/healthcheck.js` — health endpoints
+- `assignment-solution/backend/production-logger.js` — Winston logger
+- `assignment-solution/frontend/netlify.toml` — Netlify caching headers
+- `.github/workflows/ci.yml` — CI workflow (lint, test, build)
+- `.github/workflows/cd-backend.yml` — backend CD template (Heroku example)
+- `.github/workflows/cd-frontend.yml` — frontend CD template (Netlify example)
+- `assignment-solution/sentry-setup.md` — Sentry integration notes
+
+To finish the assignment quickly:
+
+1. Pick your providers (backend: Heroku/Render/Railway, frontend: Vercel/Netlify/GitHub Pages).
+2. Add provider secrets in GitHub (Repository Settings → Secrets).
+3. Copy the templates into your app, update `package.json` scripts if needed, and push to `main`.
+4. Watch the GitHub Actions runs and adjust as necessary.
+
+If you tell me which providers you prefer I will customize the workflows and commands for you.
